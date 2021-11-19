@@ -15,13 +15,21 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.rigix.navigationcomponents.R
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private lateinit var navController: NavController
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     private lateinit var listener: NavController.OnDestinationChangedListener
+
+    override fun getActivity(): String {
+        return getActivity()
+    }
+
+    override fun calculate(v1: Int, v2: Int) {
+        print(v1+v2)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
